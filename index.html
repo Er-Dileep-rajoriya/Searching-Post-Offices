@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Searching Post Offices</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="main-section">
+      <div class="left">
+        <h2>Post Office Application.</h2>
+        <p>
+          This Application Allows you to extract information about the nearest
+          Post Offices, based on your location.
+        </p>
+
+        <div>
+          <img src="./undraw_messenger_re_8bky 1@2x (1).png" alt="Icon" />
+        </div>
+      </div>
+      <div class="right">
+        <p>Your Current IP Address is <span id="ip-text">127.0.01</span></p>
+        <button id="start-btn">Get Started</button>
+      </div>
+    </section>
+
+    <section id="ip-section" class="display-none">
+      <div class="first-div">
+        <p>IP Address : <span id="ip-section-ip">127.0.01</span></p>
+      </div>
+
+      <!-- second container -->
+      <div class="second-div">
+        <div id="lat">Lat:</div>
+        <div id="city">City:</div>
+        <div id="org">Organisation:</div>
+        <div id="long">Long:</div>
+        <div id="region">Region:</div>
+        <div id="hostname">Hostname:</div>
+      </div>
+
+      <!-- third container -->
+      <div class="third-div">
+        <p>Your Current Location</p>
+
+        <iframe
+          id="map"
+          src="https://maps.google.com/maps?q=35.856737, 10.606619&z=15&output=embed"
+          width="360"
+          height="270"
+          frameborder="0"
+          style="border: 0"
+        ></iframe>
+      </div>
+
+      <!-- Fourth Container -->
+      <div class="fourth-div">
+        <h3>More Information About You</h3>
+        <div>
+          <p>Time Zone : <span id="time-zone"></span></p>
+          <p>Date and Time : <span id="date-and-time"></span></p>
+          <p>Pincode : <span id="pincode"></span></p>
+          <p>
+            Message :
+            <span>Message: Number of pincode(s) found: <span>1</span></span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Fifth Containaer -->
+
+      <div class="fifth-div">
+        <h3>Post Offices Near You</h3>
+        <div class="search-div">
+          <div><i class="fa-solid fa-magnifying-glass"></i></div>
+          <input
+            type="search"
+            name="post-office"
+            id="search-bar"
+            placeholder="Search By Name"
+          />
+        </div>
+
+        <div class="post-office-container" id="post-container"></div>
+      </div>
+    </section>
+
+    <script
+      src="https://kit.fontawesome.com/7bc33bb8be.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
